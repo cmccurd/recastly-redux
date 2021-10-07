@@ -3,10 +3,21 @@ import currentVideoReducer from './currentVideo.js';
 import videoListReducer from './videoList.js';
 // import
 // import Redux from 'redux';
+var searchBarReducer = (state = '', action) => {
+    //TODO: define a reducer for the currentVideo field of our state.
+    switch (action.type) {
+      case "CHANGE_SEARCH":
+    //    console.log(action.text);
+        return action.text || state;
+      default:
+        return state;
+    }
+};
 
 const rootReducer = combineReducers({
     videoList: videoListReducer,
-    currentVideo: currentVideoReducer
+    currentVideo: currentVideoReducer,
+    searchBar: searchBarReducer
 });
 
 

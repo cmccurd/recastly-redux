@@ -11,13 +11,22 @@ var handleVideoSearch = (q) => {
     key: YOUTUBE_API_KEY,
     query: q
   }
-  return (dispatch) => {
+  (dispatch) => {
     searchYouTube(query,  () => {
       dispatch(changeVideoList);
     });
   };
+  return ({
+    type: 'CHANGE_SEARCH',
+    text: q
+  });
   //TODO:  Write an asynchronous action to handle a video search!
-
 };
+// var searchBar = (text) => ({
+//   type: 'SEARCH_ADD',
+//   text: text
+// });
 
 export default handleVideoSearch;
+
+

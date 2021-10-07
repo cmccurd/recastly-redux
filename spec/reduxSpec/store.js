@@ -8,7 +8,7 @@ describe('store', function() {
     var actual = Object.keys(store);
 
 
-    console.log('actual', store.getState());    expect(actual).to.deep.equal(expected);
+        expect(actual).to.deep.equal(expected);
   });
   it('should have a state with a .currentVideo field', function() {
     expect(store.getState().currentVideo).to.be.an('object');

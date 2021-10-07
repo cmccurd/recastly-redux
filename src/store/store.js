@@ -15,14 +15,12 @@ function configureStore(initialize) {
       applyMiddleware(thunk)
   );
 }
+var preload = {
+  videoList: exampleVideoData,
+  currentVideo: exampleVideoData[0]
+};
 
-const store = configureStore({videoList: exampleVideoData});
+const store = configureStore(preload);
 
-// render(
-//   <Provider store={store}>
-//       <ItemList />
-//   </Provider>,
-//   document.getElementById('app')
-// );
 
 export default store;
