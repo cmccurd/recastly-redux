@@ -10,6 +10,8 @@ import YOUTUBE_API_KEY from './config/youtube.js';
 //  the rest of your app.
 
 ReactDOM.render(
+  //
   <App API_KEY={YOUTUBE_API_KEY} searchYouTube={searchYouTube} />,
   document.getElementById('app')
 );
+
